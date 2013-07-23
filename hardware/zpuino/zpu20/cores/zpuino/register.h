@@ -159,11 +159,23 @@ typedef volatile unsigned int* register_t;
 
 #define BAUDRATEGEN(x) ((CLK_FREQ/(x))/16)-1
 
+/* INPUT, OUTPUT, HIGH, and LOW are now in Arduino.h,
+   but in case somebody includes this without including
+   that, we keep backup #define's here
+ */
+#ifndef INPUT
 #define INPUT 1
+#endif
+#ifndef OUTPUT
 #define OUTPUT 0
+#endif
 
+#ifndef HIGH
 #define HIGH 1
+#endif
+#ifndef LOW
 #define LOW 0
+#endif
 
 /* PPS configuration - output */
 
